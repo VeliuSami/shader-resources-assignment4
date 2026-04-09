@@ -136,7 +136,7 @@ void CSphere::RenderGL()
 {
 	glUseProgram(m_program);
 	glBindVertexArray(m_vao);
-	glDrawArrays(GL_TRIANGLES, 0, vertexArray.size());
+	glDrawArrays(GL_TRIANGLES, 0, (GLsizei)vertexArray.size());
 }
 
 void CSphere::CleanGL()

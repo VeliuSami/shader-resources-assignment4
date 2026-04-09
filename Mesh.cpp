@@ -60,7 +60,7 @@ void CMesh::RenderGL()
 {
 	glUseProgram(m_program);
 	glBindVertexArray(m_vao);
-	glDrawArrays(GL_TRIANGLES, 0, vertexArray.size());
+	glDrawArrays(GL_TRIANGLES, 0, (GLsizei)vertexArray.size());
 }
 
 void CMesh::CleanGL()
@@ -292,6 +292,7 @@ void CMesh::CreateDecagonalPrism(float radius, float height)
 
 	const int sides = 10;
 	const float halfH = 0.5f * height;
+	const float pi = glm::pi<float>();
 
 	auto addVNT = [&](const glm::vec3& v, const glm::vec3& n, const glm::vec2& t)
 	{
@@ -305,8 +306,8 @@ void CMesh::CreateDecagonalPrism(float radius, float height)
 	// Side faces (two triangles per side)
 	for (int i = 0; i < sides; i++)
 	{
-		const float a0 = (2.f * (float)M_PI * (float)i) / (float)sides;
-		const float a1 = (2.f * (float)M_PI * (float)(i + 1)) / (float)sides;
+		const float a0 = (2.f * pi * (float)i) / (float)sides;
+		const float a1 = (2.f * pi * (float)(i + 1)) / (float)sides;
 
 		const glm::vec3 p0(radius * cosf(a0), -halfH, radius * sinf(a0)); // bottom i
 		const glm::vec3 p1(radius * cosf(a1), -halfH, radius * sinf(a1)); // bottom i+1
@@ -337,8 +338,8 @@ void CMesh::CreateDecagonalPrism(float radius, float height)
 
 		for (int i = 0; i < sides; i++)
 		{
-			const float a0 = (2.f * (float)M_PI * (float)i) / (float)sides;
-			const float a1 = (2.f * (float)M_PI * (float)(i + 1)) / (float)sides;
+			const float a0 = (2.f * pi * (float)i) / (float)sides;
+			const float a1 = (2.f * pi * (float)(i + 1)) / (float)sides;
 			const glm::vec3 p0(radius * cosf(a0), +halfH, radius * sinf(a0));
 			const glm::vec3 p1(radius * cosf(a1), +halfH, radius * sinf(a1));
 
@@ -360,8 +361,8 @@ void CMesh::CreateDecagonalPrism(float radius, float height)
 
 		for (int i = 0; i < sides; i++)
 		{
-			const float a0 = (2.f * (float)M_PI * (float)i) / (float)sides;
-			const float a1 = (2.f * (float)M_PI * (float)(i + 1)) / (float)sides;
+			const float a0 = (2.f * pi * (float)i) / (float)sides;
+			const float a1 = (2.f * pi * (float)(i + 1)) / (float)sides;
 			const glm::vec3 p0(radius * cosf(a0), -halfH, radius * sinf(a0));
 			const glm::vec3 p1(radius * cosf(a1), -halfH, radius * sinf(a1));
 
