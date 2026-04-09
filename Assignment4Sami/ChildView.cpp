@@ -138,9 +138,11 @@ void CChildView::RenderGL()
 	m_nPVM = glGetUniformLocation(m_program, "mPVM");
 	m_nVM = glGetUniformLocation(m_program, "mVM");
 
-	M = translate(mat4(1.f), vec3(8.f, -0.35f, 5.5f))
-		* rotate(mat4(1.f), -35.f, vec3(0.f, 1.f, 0.f))
-		* scale(mat4(1.f), vec3(0.38f, 0.38f, 0.38f));
+	// Place fish clearly in front of (and offset from) the cat to avoid intersection.
+	M = translate(mat4(1.f), vec3(6.0f, -1.1f, 11.0f))
+		* rotate(mat4(1.f), -55.f, vec3(0.f, 1.f, 0.f))
+		* rotate(mat4(1.f), 10.f, vec3(1.f, 0.f, 0.f))
+		* scale(mat4(1.f), vec3(0.34f, 0.34f, 0.34f));
 	VM = m_mVM * M;
 	PVM = m_mPVM * M;
 
