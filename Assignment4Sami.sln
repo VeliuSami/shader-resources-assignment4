@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment4Sami", "Assignment4Sami\\Assignment4Sami.vcxproj", "{F2F3B5D6-9F2A-4A11-93EA-1E6E9E4E8746}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2F3B5D6-9F2A-4A11-93EA-1E6E9E4E8746}.Debug|x64.ActiveCfg = Debug|x64
+		{F2F3B5D6-9F2A-4A11-93EA-1E6E9E4E8746}.Debug|x64.Build.0 = Debug|x64
+		{F2F3B5D6-9F2A-4A11-93EA-1E6E9E4E8746}.Release|x64.ActiveCfg = Release|x64
+		{F2F3B5D6-9F2A-4A11-93EA-1E6E9E4E8746}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3E14B56-8DA7-4B16-9FBA-8C75C6E6C1B5}
+	EndGlobalSection
+EndGlobal
